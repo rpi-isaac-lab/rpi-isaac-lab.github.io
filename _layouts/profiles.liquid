@@ -3,34 +3,57 @@ layout: page
 ---
 <div class="post">
   <article>
-    {% if page.profiles %}
-      {% for profile in page.profiles %}
-        <hr>
-        <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
-          {% if profile.image %}
-            {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
-            {% if profile.image_circular %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-            {% else %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-            {% endif %}
-            {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
-            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
-          {% endif %}
-          {% if profile.more_info %}
-            <div class="more-info">{{ profile.more_info }}</div>
-          {% endif %}
-        </div>
+	{% assign left_photo = true %}
+	{% for status in page.display_status %}
+		<a id="{{ status }}" href=".#{{ status }}">
+			<h1 class="status">{{ status }}</h1>
+		</a>
+		{% assign status_people = site.people | where: "status", status %}
+		<!-- Display categorized projects -->
+		{% for category in page.display_categories %}
+			<a id="{{ category }}" href=".#{{ category }}">
+				<h1 class="category">{{ category }}</h1>
+			</a>
+			{% assign categorized_people = status_people | where: "category", category %}
+			<!-- Generate cards for each person -->
+			{% for profile in categorized_people %}
+				{% if profile.name == "Template" %}
+					{% continue %}
+				{% endif %}
+				<hr>
+				<div class="profile float-{% if left_photo %}left{% else %}right{% endif %}">
+					{% if left_photo %}
+						{% assign left_photo = nil %}
+					{% else %}
+						{% assign left_photo = true %}
+					{% endif %}
+					{% if profile.image %}
+						{% assign profile_image_path = profile.image | prepend: 'assets/profiles/' %}
+						{% if profile.image_circular %}
+							{% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+						{% else %}
+							{% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+						{% endif %}
+						{% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+						{% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+					{% endif %}
+					<!-- Assorted Links -->
+					{% if profile.linkedin %}
+						<a href="https://www.linkedin.com/in/{{ profile.linkedin }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+					{% endif %}
+					{% if profile.github %}
+						<a href="https://github.com/{{ profile.github }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
+					{% endif %}
+					{% if profile.research_gate %}
+						<a href="https://www.researchgate.net/profile/{{profile.research_gate}}/" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
+					{% endif %}
+				</div>
 
-        <div class="clearfix">
-          {% if profile.content %}
-            {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
-            {{ profile_content | markdownify }}
-          {% else %}
-            {{ content }}
-          {% endif %}
-        </div>
-      {% endfor %}
-    {% endif %}
+				<div class="clearfix">
+					{{ profile.content }}
+				</div>
+			{% endfor %}
+    {% endfor %}
+	{% endfor %}
   </article>
 </div>
