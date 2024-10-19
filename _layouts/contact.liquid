@@ -1,0 +1,33 @@
+---
+layout: page
+---
+<div class="post">
+  <article>
+	<hr>
+	<div class="profile float-{% if page.align == left %}left{% else %}right{% endif %}">
+		{% if page.image %}
+			{% assign profile_image_path = page.image | prepend: 'assets/profiles/' %}
+			{% if page.image_circular %}
+				{% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+			{% else %}
+				{% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+			{% endif %}
+			{% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+			{% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.image %}
+		{% endif %}
+		<!-- Assorted Links -->
+		{% if page.linkedin %}
+			<a href="https://www.linkedin.com/in/{{ profile.linkedin }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+		{% endif %}
+		{% if page.github %}
+			<a href="https://github.com/{{ profile.github }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
+		{% endif %}
+		{% if page.research_gate %}
+			<a href="https://www.researchgate.net/profile/{{profile.research_gate}}/" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
+		{% endif %}
+	</div>
+	<div class="clearfix">
+		{{ page.content | markdownify }}
+	</div>
+  </article>
+</div>

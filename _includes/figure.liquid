@@ -23,6 +23,9 @@
         type="image/webp"
       >
     {% endif %}
+    {% if include.link %}
+      <a id="img-link" href="{{ include.link }}">
+    {% endif %}
     <img
       src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
       {% if include.class %}
@@ -70,6 +73,9 @@
       {% endif %}
       onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
     >
+    {% if include.link %}
+      </a>
+    {% endif %}
   </picture>
 
   {% if include.caption %}

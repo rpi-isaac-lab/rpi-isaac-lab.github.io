@@ -1,12 +1,12 @@
 ---
 name: Template
-image: 12.jpg
+image: none.jpg
 image_circular:
-category: PhD
+category: 
 status: Current
-linkedin: test
-github: test
-research_gate: test
+linkedin: 
+github: 
+research_gate: 
 ---
 # Template
 
