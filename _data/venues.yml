@@ -7,3 +7,12 @@
 
 "Vision":
   color: "#009f36"
+
+"IEEE":
+  url: https://xploreqa.ieee.org/Xplore/home.jsp
+
+"ASME":
+  url: https://www.asme.org/
+
+"ACC":
+  url: https://ieeexplore.ieee.org/xpl/conhome/1000030/all-proceedings

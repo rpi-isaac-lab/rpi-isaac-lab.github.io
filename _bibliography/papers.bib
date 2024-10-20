@@ -48,6 +48,7 @@
 	author = {Chen, Alvin and Kopsaftopoulos, Fotis and Mishra, Sandipan},
 	month = sep,
 	year = {2023},
+	pdf = {chen_alvin_data_sparse_approach.pdf}
 }
 
 @article{inyang-udoh_learn-and-control_2022,
@@ -135,4 +136,64 @@
 	month = aug,
 	year = {2024},
 	pages = {3100--3108},
+}
+
+@inproceedings{mai_ACC_2025,
+	bibtex_show={true},
+  abbr={ACC},
+	address = {Denver, CO, USA},
+	title = {Modeling human-autonomy team steering behavior in shared-autonomy driving scenarios},
+	booktitle = {2025 {American} {Controls} {Conference} ({ACC}) (Under review)},
+	publisher = {IFAC},
+	author = {Mai, Rene, Daveron, Kara, Agung Julius and Mishra, Sandipan},
+	year = {2025},
+}
+
+@inproceedings{mai_analysis_2024,
+	bibtex_show={true},
+  abbr={IFAC},
+	address = {Antalya, Turkiye},
+	title = {Analysis of human steering behavior differences in human-in-control and autonomy-in-control driving},
+	url = {https://arxiv.org/html/2410.00181v1 (previous version)},
+	urldate = {2024-10-02},
+	booktitle = {2024 {IFAC} {Workshop} {on} {Cyber-} {Physical} {Human} {Systems} ({CPHS}) (Accepted)},
+	publisher = {IFAC},
+	author = {Mai, Rene and Agung Julius and Mishra, Sandipan},
+	year = {2024},
+	file = {© 2024 the authors. This work has been accepted to IFAC for publication at the 5th IFAC Workshop on Cyber-Physical Human Systems under a Creative Commons Licence CC-BY-NC-ND:C\:\\Users\\relis\\Zotero\\storage\\VVHNBEST\\2410.html:text/html},
+}
+
+@article{mai_generalized_2024,
+	bibtex_show={true},
+  abbr={ASME},
+	title = {Generalized two-point visual control model of human steering for accurate state estimation},
+	issn = {2689-6117},
+	url = {https://doi.org/10.1115/1.4066630},
+	doi = {10.1115/1.4066630},
+	abstract = {We derive and validate a generalization of the two-point visual control model, an accepted cognitive science model for human steering behavior. The generalized model is needed as current steering models are either insufficiently accurate or too complex for online state estimation. We demonstrate that the generalized model replicates specific human steering behavior with high precision (85\% reduction in modeling error) and integrate this model into a human-as-advisor framework where human steering inputs are used for state estimation. As a benchmark study, we use this framework to decipher ambiguous lane markings represented by biased lateral position measurements. We demonstrate that, with the generalized model, the state estimator can accurately estimate the true vehicle state, providing lateral state estimates with under 0.15 m error across participants. However, without the generalized model, the estimator cannot accurately estimate the vehicle's lateral state.},
+	urldate = {2024-09-25},
+	journal = {ASME Letters in Dynamic Systems and Control},
+	author = {Mai, Rene and Sears, Katherine and Roessling, Grace and Julius, Agung and Mishra, Sandipan},
+	month = sep,
+	year = {2024},
+	pages = {1--10},
+}
+
+@inproceedings{mai_human-as-advisor_2023,
+	bibtex_show={true},
+  abbr={ACC},
+	address = {San Diego, CA, USA},
+	title = {Human-as-advisor in the loop for autonomous lane-keeping},
+	isbn = {9798350328066},
+	url = {https://ieeexplore.ieee.org/document/10156374/},
+	doi = {10.23919/ACC55779.2023.10156374},
+	abstract = {This paper presents a human-as-advisor architecture for shared human-machine autonomy in dynamic systems. In the human-as-advisor architecture, the human provides suggested control actions to the autonomous system; the system uses a model of the human controller to ascertain the system’s state as perceived by the human. The system combines this information with additional sensor measurements, yielding an improved state estimate. We apply this architecture to the problem of lane-centering an autonomous vehicle in the presence of conflicting lane markings that render the true lane center uncertain. We model conflicting lane markings with a multi-component Gaussian mixture model. The humansuggested course of action is interpreted as an additional sensor measurement, which a Kalman filter is designed to combine with a speedometer and camera for improving the state estimate. With human input from our human-as-advisor architecture, the vehicle centers itself in the lane; without human input, the vehicle does not center itself. We also demonstrate the human-as-advisor architecture is robust to additive output matrix uncertainty and non-linear perturbations in the human model used to interpret the human-suggested control actions.},
+	language = {en},
+	urldate = {2023-09-05},
+	booktitle = {2023 {American} {Control} {Conference} ({ACC})},
+	publisher = {IEEE},
+	author = {Mai, Rene and Mishra, Sandipan and Julius, Agung},
+	month = may,
+	year = {2023},
+	pages = {3895--3900},
 }
