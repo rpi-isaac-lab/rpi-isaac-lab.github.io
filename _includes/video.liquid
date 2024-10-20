@@ -1,5 +1,6 @@
 {% assign extension = include.path | split: '.' | last %}
 
+<div class="video-container">
 <figure>
   {% if extension == 'mp4' or extension == 'webm' or extension == 'ogg' %}
     <video
@@ -95,3 +96,4 @@
     <figcaption class="caption">{{ include.caption }}</figcaption>
   {% endif %}
 </figure>
+</div>
