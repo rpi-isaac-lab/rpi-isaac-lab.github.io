@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A collection of our projects
+description: 
 nav: true
 nav_order: 4
 display_categories: [current, past]
@@ -31,7 +31,9 @@ horizontal: false
   {% else %}
   <div class="row row-cols-1 row-cols-md-3">
     {% for project in sorted_projects %}
-      {% include projects.liquid %}
+      {% if project.title != "Template" %}
+        {% include projects.liquid %}
+      {% endif %}
     {% endfor %}
   </div>
   {% endif %}
