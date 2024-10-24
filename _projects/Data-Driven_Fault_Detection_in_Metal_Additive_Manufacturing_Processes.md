@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: project
 title: Data-Driven Fault Detection in Metal Additive Manufacturing Processes
-description: "Lead Researcher: Alvin Chen"
+researcher: Alvin Chen
 img: assets/img/prod_and_monitoring_testbed.png
 importance: 1
 category: current

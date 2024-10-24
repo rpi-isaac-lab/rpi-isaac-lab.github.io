@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: project
 title: Wire-Arc Additive Manufacturing
-description: "Lead Researcher: Jinhan Ren"
+researcher: Jinhan Ren
 img: assets/img/waam_layers.png
 importance: 1
 category: current

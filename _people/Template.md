@@ -7,8 +7,9 @@ status: Current
 linkedin: 
 github: 
 research_gate: 
+email: 
+project: 
 ---
-# Template
 
 This is the template bio. This template has not led a tremendously interesting life. Hopefully you have something interesting to replace it with.
 

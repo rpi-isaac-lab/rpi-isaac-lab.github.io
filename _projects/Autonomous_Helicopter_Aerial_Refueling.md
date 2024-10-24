@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: project
 title: Autonomous Helicopter Aerial Refueling
-description: "Lead Researcher: Damsara Jayarathne"
+researcher: Damsara Jayarathne
 img: assets/img/heli_refuel_img.png
 importance: 1
 category: current

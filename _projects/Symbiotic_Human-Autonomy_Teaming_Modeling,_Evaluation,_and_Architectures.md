@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: project
 title: Symbiotic Human-Autonomy Teaming Modeling, Evaluation, and Architectures
-description: "Lead Researcher: Rene Mai"
+researcher: Rene Mai
 img: assets/img/carla.png
 importance: 1
 category: current

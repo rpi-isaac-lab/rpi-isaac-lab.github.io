@@ -39,17 +39,28 @@ layout: page
 					{% endif %}
 					<!-- Assorted Links -->
 					{% if profile.linkedin %}
-						<a href="https://www.linkedin.com/in/{{ profile.linkedin }}" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="https://www.linkedin.com/in/{{ profile.linkedin }}" title="LinkedIn"><i class="fa-brands fa-linkedin fa-lg"></i></a>
 					{% endif %}
 					{% if profile.github %}
-						<a href="https://github.com/{{ profile.github }}" title="GitHub"><i class="fa-brands fa-github"></i></a>
+						<a href="https://github.com/{{ profile.github }}" title="GitHub"><i class="fa-brands fa-github fa-lg"></i></a>
 					{% endif %}
 					{% if profile.research_gate %}
-						<a href="https://www.researchgate.net/profile/{{profile.research_gate}}/" title="ResearchGate"><i class="ai ai-researchgate"></i></a>
+						<a href="https://www.researchgate.net/profile/{{profile.research_gate}}/" title="ResearchGate"><i class="ai ai-researchgate ai-lg"></i></a>
+					{% endif %}
+					{% if profile.email %}
+						<a href="mailto:{{ profile.email | encode_email }}" title="email"><i class="fa-solid fa-envelope fa-lg"></i></a>
 					{% endif %}
 				</div>
 				<div class="clearfix">
-					{{ profile.content }}
+					<a id="{{ profile.name | remove: '"' }}" href=".#{{ profile.name | remove: '"' }}">
+						<h2 class="name">{{ profile.name }}</h2>
+					</a>
+					{% if profile.project %}
+						<div class="project-link">
+						<a href=/projects/{{ profile.project }}>Project: {{ profile.project | replace: "_", " " }}</a>
+						</div>
+					{% endif %}
+					{{ profile.content | markdownify }}
 				</div>
 			{% endfor %}
     {% endfor %}

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: Template
 description: "Lead Researcher: Researcher_Name"
 img: assets/img/carla.png
