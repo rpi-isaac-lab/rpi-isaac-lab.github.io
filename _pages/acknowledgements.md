@@ -40,6 +40,10 @@ groups:
 - image: cnpq.jpg
   link: https://www.gov.br/cnpq/pt-br
   name: Conselho Nacional de Sesenvolvimento Cientifico e Technologico
+
+- image : linksim.png
+  link: https://linksim.org/
+  name: LINKSIM
 ---
 
 Funding agencies and research partners:
