@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Template
-description: "Lead Researcher: Researcher_Name"
+researcher: Template name
 img: assets/img/carla.png
 importance: 1
 category: current
