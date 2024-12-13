@@ -2,7 +2,7 @@
 name: Jayden Smith
 image: none.jpg
 image_circular:
-category: Undergrad
+category: PhD
 status: Current
 linkedin: jayden-smith
 github: Jayden-ASC5
