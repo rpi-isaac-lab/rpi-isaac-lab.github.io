@@ -1,6 +1,6 @@
 ---
 name: Jayden Smith
-image: none.jpg
+image: jaydensmith.jpg
 image_circular:
 category: Undergrad
 status: Current
