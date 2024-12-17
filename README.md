@@ -22,7 +22,7 @@ All the lab's projects should have project pages. They are found in the "_projec
 
 ## News Updates
 
-Prof. Mishra has stated that he wants the news section removed, I just haven't handled that yet. I'll take care of it.
+Prof. Mishra has stated that he wanted the news section removed. If for some reason it is decided to return it, transfer it from the "_trash" directory to the "_pages" directory. Further news updates can then be added in the "_news" directory similarly to student and project pages, except with filenames of the post number.
 
 ## Publications Updates
 
