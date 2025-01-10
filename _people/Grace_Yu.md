@@ -1,6 +1,6 @@
 ---
 name: Grace Yu
-image: none.jpg
+image: GraceYu.JPG
 image_circular:
 category: Undergrad
 status: Current
