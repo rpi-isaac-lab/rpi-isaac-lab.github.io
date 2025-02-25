@@ -3,7 +3,7 @@ layout: contact
 title: Contact
 permalink: /contact/
 align: right
-image: mishra.jpg
+image: Mishra_2025.png
 nav: true
 nav_order: 1
 linkedin:
